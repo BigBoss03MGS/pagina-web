@@ -1,0 +1,83 @@
+<div class="flex min-h-screen bg-yellow-300 p-8">
+    <!-- Sidebar (Opcionalmente puedes reutilizar el sidebar aquí) -->
+    <aside class="bg-blue-200 w-1/4 p-4">
+      <nav class="space-y-4">
+        <div class="flex items-center space-x-2">
+          <img src="assets/profile-icon.png" alt="Mi perfil" class="w-6 h-6">
+          <a href="#" class="font-semibold">Mi perfil</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <img src="assets/classes-icon.png" alt="Mis clases" class="w-6 h-6">
+          <a href="#" class="font-semibold">Mis clases</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <img src="assets/membership-icon.png" alt="Membresías" class="w-6 h-6">
+          <a href="#" class="font-semibold">Membresías</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <img src="assets/trainers-icon.png" alt="Entrenadores" class="w-6 h-6">
+          <a href="#" class="font-semibold">Entrenadores</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <img src="assets/history-icon.png" alt="Historial" class="w-6 h-6">
+          <a href="#" class="font-semibold">Historial de entrenamiento</a>
+        </div>
+      </nav>
+    </aside>
+  
+    <!-- Main Content -->
+    <main class="flex-1 p-8">
+      <h2 class="text-2xl font-semibold mb-6 text-center">¿Qué clase quiere tomar hoy?</h2>
+  
+      <!-- Buscar clase -->
+      <input
+        type="text"
+        placeholder="Buscar"
+        class="w-full p-2 mb-6 bg-yellow-200 rounded-lg text-black"
+      />
+  
+      <!-- Horarios y Calendario -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Horarios -->
+        <div>
+          <h3 class="text-lg font-semibold">Horarios</h3>
+          <ul class="mt-4 space-y-2">
+            <li class="bg-yellow-100 p-4 rounded-lg">
+              <strong>Mañana</strong> (6:00 AM - 12:00 PM)
+            </li>
+            <li class="bg-yellow-100 p-4 rounded-lg">
+              <strong>Tarde</strong> (12:00 PM - 6:00 PM)
+            </li>
+            <li class="bg-yellow-100 p-4 rounded-lg">
+              <strong>Noche</strong> (6:00 PM - 10:00 PM)
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Calendario -->
+        <div>
+          <h3 class="text-lg font-semibold text-center">Calendario</h3>
+          <div class="flex justify-center items-center bg-white p-4 rounded-lg shadow-md">
+            <img src="assets/calendar-sample.png" alt="Calendario" class="w-full">
+          </div>
+        </div>
+      </div>
+  
+      <!-- Niveles de Dificultad -->
+      <div class="mt-8">
+        <h3 class="text-lg font-semibold mb-4">Dificultad</h3>
+        <div class="space-x-4">
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">Principiante</button>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">Intermedio</button>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">Avanzado</button>
+        </div>
+      </div>
+  
+      <!-- Botones de Confirmación -->
+      <div class="flex justify-end mt-8 space-x-4">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">Confirmar</button>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">Cancelar</button>
+      </div>
+    </main>
+  </div>
+  

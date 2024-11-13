@@ -1,0 +1,82 @@
+<div class="flex min-h-screen bg-yellow-300 p-8">
+    <!-- Sidebar -->
+    <aside class="bg-blue-200 w-1/4 p-4">
+      <nav class="space-y-4">
+        <div class="flex items-center space-x-2">
+          <img src="assets/profile-icon.png" alt="Mi perfil" class="w-6 h-6">
+          <a routerLink="/mi-perfil" class="font-semibold">Mi perfil</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <img src="assets/classes-icon.png" alt="Mis clases" class="w-6 h-6">
+          <a routerLink="/mis-clases" class="font-semibold">Mis clases</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <img src="assets/membership-icon.png" alt="Membresías" class="w-6 h-6">
+          <a href="#" class="font-semibold">Membresías</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <img src="assets/trainers-icon.png" alt="Entrenadores" class="w-6 h-6">
+          <a href="#" class="font-semibold">Entrenadores</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <img src="assets/history-icon.png" alt="Historial" class="w-6 h-6">
+          <a href="#" class="font-semibold">Historial de entrenamiento</a>
+        </div>
+      </nav>
+    </aside>
+  
+    <!-- Main Content -->
+    <main class="flex-1 p-8 space-y-8">
+      <!-- Información del Usuario -->
+      <div class="flex items-center space-x-4">
+        <img src="assets/user-avatar.png" alt="User Avatar" class="w-24 h-24 bg-gray-200 rounded-full">
+        <h2 class="text-2xl font-semibold">{{ usuario.nombreUsuario }}</h2>
+      </div>
+  
+      <!-- Sección de Datos del Usuario y Progreso Físico -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Mis datos -->
+        <div class="bg-yellow-100 p-4 rounded-lg shadow-md">
+          <h3 class="text-lg font-semibold mb-4">Mis datos</h3>
+          <p><strong>Nombre de usuario:</strong> {{ usuario.nombreUsuario }}</p>
+          <p><strong>Nombre completo:</strong> {{ usuario.nombreCompleto }}</p>
+          <p><strong>Correo electrónico:</strong> {{ usuario.correo }}</p>
+          <p><strong>Fecha de nacimiento:</strong> {{ usuario.fechaNacimiento }}</p>
+          <p><strong>Peso:</strong> {{ usuario.peso }}</p>
+          <p><strong>Altura:</strong> {{ usuario.altura }}</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4">Cambiar datos</button>
+        </div>
+  
+        <!-- Progreso Físico -->
+        <div class="bg-yellow-100 p-4 rounded-lg shadow-md">
+          <h3 class="text-lg font-semibold mb-4">Mi progreso físico</h3>
+          <p><strong>Peso corporal:</strong> {{ progresoFisico.pesoCorporal }}</p>
+          <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+            <div class="bg-purple-500 h-2 rounded-full" style="width: 50%"></div>
+          </div>
+          <p><strong>Grasa corporal:</strong> {{ progresoFisico.grasaCorporal }}</p>
+          <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+            <div class="bg-blue-500 h-2 rounded-full" style="width: 20%"></div>
+          </div>
+          <p><strong>Masa muscular:</strong> {{ progresoFisico.masaMuscular }}</p>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-blue-300 h-2 rounded-full" style="width: 30%"></div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Historial de Entrenamientos -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Historial de entrenamientos</h3>
+        <div class="grid grid-cols-5 gap-4 bg-yellow-100 p-4 rounded-lg shadow-md">
+          <!-- Repite este div para agregar más días de entrenamiento -->
+          <div class="w-full h-20 bg-gray-300 rounded-lg flex items-center justify-center">Día 1</div>
+          <div class="w-full h-20 bg-gray-300 rounded-lg flex items-center justify-center">Día 2</div>
+          <div class="w-full h-20 bg-gray-300 rounded-lg flex items-center justify-center">Día 3</div>
+          <div class="w-full h-20 bg-gray-300 rounded-lg flex items-center justify-center">Día 4</div>
+          <div class="w-full h-20 bg-gray-300 rounded-lg flex items-center justify-center">Día 5</div>
+        </div>
+      </div>
+    </main>
+  </div>
+  

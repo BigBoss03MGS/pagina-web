@@ -1,0 +1,17 @@
+button {
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #003366;
+  }
+  
+  aside nav div a {
+    color: #333;
+  }
+  
+  aside nav div a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  

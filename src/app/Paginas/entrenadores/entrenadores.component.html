@@ -1,0 +1,19 @@
+<div class="bg-yellow-300 min-h-screen p-8">
+    <h2 class="text-3xl font-semibold text-center mb-8">Entrenadores</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div *ngFor="let categoria of categorias" class="bg-yellow-200 p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-4 text-center">{{ categoria.nombre }}</h3>
+        
+        <div *ngFor="let entrenador of categoria.entrenadores" class="mb-4 flex flex-col items-center">
+          <button class="bg-blue-800 text-white px-4 py-2 rounded-md font-semibold w-full mb-2">
+            Entrenador: {{ entrenador.nombre }}
+          </button>
+          <button class="bg-blue-800 text-white px-4 py-2 rounded-md font-semibold w-full">
+            Checar disponibilidad
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

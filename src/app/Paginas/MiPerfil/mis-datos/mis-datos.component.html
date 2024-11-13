@@ -1,0 +1,46 @@
+<div class="bg-yellow-300 p-8 min-h-screen">
+    <!-- Encabezado del perfil del usuario -->
+    <div class="flex items-center space-x-4 mb-8">
+      <img src="assets/user-avatar.png" alt="User Avatar" class="w-24 h-24 bg-gray-200 rounded-full">
+      <h2 class="text-2xl font-semibold">{{ usuario.nombreUsuario }}</h2>
+    </div>
+  
+    <!-- Información del usuario -->
+    <div class="bg-yellow-100 p-6 rounded-lg shadow-md">
+      <h3 class="text-lg font-semibold mb-4">Mis datos</h3>
+  
+      <div *ngIf="!editMode">
+        <p><strong>Nombre de usuario:</strong> {{ usuario.nombreUsuario }}</p>
+        <p><strong>Nombre completo:</strong> {{ usuario.nombreCompleto }}</p>
+        <p><strong>Correo electrónico:</strong> {{ usuario.correo }}</p>
+        <p><strong>Fecha de nacimiento:</strong> {{ usuario.fechaNacimiento }}</p>
+        <p><strong>Peso:</strong> {{ usuario.peso }}</p>
+        <p><strong>Altura:</strong> {{ usuario.altura }}</p>
+        <button (click)="toggleEditMode()" class="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4">Cambiar datos</button>
+      </div>
+  
+      <!-- Formulario de edición -->
+      <div *ngIf="editMode">
+        <label class="block mb-2">Nombre de usuario:</label>
+        <input type="text" [(ngModel)]="usuario.nombreUsuario" class="w-full p-2 mb-4 rounded-lg bg-white" />
+  
+        <label class="block mb-2">Nombre completo:</label>
+        <input type="text" [(ngModel)]="usuario.nombreCompleto" class="w-full p-2 mb-4 rounded-lg bg-white" />
+  
+        <label class="block mb-2">Correo electrónico:</label>
+        <input type="email" [(ngModel)]="usuario.correo" class="w-full p-2 mb-4 rounded-lg bg-white" />
+  
+        <label class="block mb-2">Fecha de nacimiento:</label>
+        <input type="text" [(ngModel)]="usuario.fechaNacimiento" class="w-full p-2 mb-4 rounded-lg bg-white" />
+  
+        <label class="block mb-2">Peso:</label>
+        <input type="text" [(ngModel)]="usuario.peso" class="w-full p-2 mb-4 rounded-lg bg-white" />
+  
+        <label class="block mb-2">Altura:</label>
+        <input type="text" [(ngModel)]="usuario.altura" class="w-full p-2 mb-4 rounded-lg bg-white" />
+  
+        <button (click)="confirmarDatos()" class="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4">Confirmar datos</button>
+      </div>
+    </div>
+  </div>
+  

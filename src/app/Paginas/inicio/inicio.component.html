@@ -1,0 +1,51 @@
+<div class="flex min-h-screen bg-yellow-300">
+    <!-- Sidebar -->
+    <aside class="bg-blue-200 w-1/4 p-4">
+      <nav class="space-y-4">
+        <div class="flex items-center space-x-2">
+          <img src="assets/profile-icon.png" alt="Mi perfil" class="w-6 h-6">
+          <a routerLink="/mi-perfil" class="font-semibold">Mi perfil</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <img src="assets/classes-icon.png" alt="Mis clases" class="w-6 h-6">
+          <a routerLink="/mis-clases" class="font-semibold">Mis clases</a>
+
+        </div>
+        <div class="flex items-center space-x-2">
+          <img src="assets/membership-icon.png" alt="Membresías" class="w-6 h-6">
+          <a href="#" class="font-semibold">Membresías</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <img src="assets/trainers-icon.png" alt="Entrenadores" class="w-6 h-6">
+          <a href="#" class="font-semibold">Entrenadores</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <img src="assets/history-icon.png" alt="Historial" class="w-6 h-6">
+          <a href="#" class="font-semibold">Historial de entrenamiento</a>
+        </div>
+      </nav>
+    </aside>
+  
+    <!-- Main Content -->
+    <main class="flex-1 p-8">
+      <h2 class="text-2xl font-semibold mb-4">Estado de membresía: <span class="text-green-600">{{ estadoMembresia }}</span></h2>
+      <p class="text-sm text-gray-700 mb-8">Membresía Activa hasta el {{ fechaVencimiento }}</p>
+  
+      <div class="bg-yellow-100 p-4 rounded-md mb-8">
+        <h3 class="text-lg font-semibold">Frase del día de hoy:</h3>
+        <p class="italic text-blue-700">"{{ fraseDelDia }}"</p>
+      </div>
+  
+      <div class="bg-yellow-100 p-4 rounded-md">
+        <h3 class="text-lg font-semibold mb-4">Clases reservadas:</h3>
+        <div *ngFor="let clase of clasesReservadas" class="flex items-center justify-between mb-2">
+          <span class="text-lg">{{ clase.nombre }}</span>
+          <div class="space-x-2">
+            <button class="bg-yellow-500 text-white px-4 py-2 rounded-md font-semibold">Detalles</button>
+            <button class="bg-yellow-500 text-white px-4 py-2 rounded-md font-semibold">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
